@@ -127,63 +127,63 @@ branchStaffTwo = \new Staff \with {
 %%%% winds staves:
 
 fluteOneStaff = \new Staff \with {
-  instrumentName = "Flute 1"
-  shortInstrumentName = "Fl. 1"
+  instrumentName = "Flute"
+  shortInstrumentName = "Fl."
   midiInstrument = "flute"
 } \fluteOne
 
-fluteTwoStaff = \new Staff \with {
-  instrumentName = "Flute 2"
-  shortInstrumentName = "Fl. 2"
-  midiInstrument = "flute"
-} \fluteTwo
+% fluteTwoStaff = \new Staff \with {
+%   instrumentName = "Flute 2"
+%   shortInstrumentName = "Fl. 2"
+%   midiInstrument = "flute"
+% } \fluteTwo
 
 oboeOneStaff = \new Staff \with {
-  instrumentName = "Oboe 1"
-  shortInstrumentName = "Ob. 1"
+  instrumentName = "Oboe"
+  shortInstrumentName = "Ob."
   midiInstrument = "oboe"
 } \oboeOne
 
-oboeTwoStaff = \new Staff \with {
-  instrumentName = "Oboe 2"
-  shortInstrumentName = "Ob. 2"
-  midiInstrument = "oboe"
-} \oboeTwo
+% oboeTwoStaff = \new Staff \with {
+%   instrumentName = "Oboe 2"
+%   shortInstrumentName = "Ob. 2"
+%   midiInstrument = "oboe"
+% } \oboeTwo
 
-clarinetOneStaff = \new Staff \with {
-  instrumentName = "Clarinet in Bb 1"
-  shortInstrumentName = "Cl. 1"
-  midiInstrument = "clarinet"
-} \clarinetOne
+% clarinetOneStaff = \new Staff \with {
+%   instrumentName = "Clarinet in Bb 1"
+%   shortInstrumentName = "Cl. 1"
+%   midiInstrument = "clarinet"
+% } \clarinetOne
 
-clarinetTwoStaff = \new Staff \with {
-  instrumentName = "Clarinet in Bb 2"
-  shortInstrumentName = "Cl. 2"
-  midiInstrument = "clarinet"
-} \clarinetTwo
+% clarinetTwoStaff = \new Staff \with {
+%   instrumentName = "Clarinet in Bb 2"
+%   shortInstrumentName = "Cl. 2"
+%   midiInstrument = "clarinet"
+% } \clarinetTwo
 
-bassoonOneStaff = \new Staff \with {
-  instrumentName = "Bassoon 1"
-  shortInstrumentName = "Bsn. 1"
-  midiInstrument = "bassoon"
-} \bassoonOne
+% bassoonOneStaff = \new Staff \with {
+%   instrumentName = "Bassoon 1"
+%   shortInstrumentName = "Bsn. 1"
+%   midiInstrument = "bassoon"
+% } \bassoonOne
 
-bassoonTwoStaff = \new Staff \with {
-  instrumentName = "Bassoon 2"
-  shortInstrumentName = "Bsn. 2"
-  midiInstrument = "bassoon"
-} \bassoonTwo
+% bassoonTwoStaff = \new Staff \with {
+%   instrumentName = "Bassoon 2"
+%   shortInstrumentName = "Bsn. 2"
+%   midiInstrument = "bassoon"
+% } \bassoonTwo
 
 windsStaves = \new StaffGroup 
 <<
     \fluteOneStaff
-    \fluteTwoStaff
+    % \fluteTwoStaff
     \oboeOneStaff
-    \oboeTwoStaff
-    \clarinetOneStaff
-    \clarinetTwoStaff
-    \bassoonOneStaff
-    \bassoonTwoStaff
+    % \oboeTwoStaff
+    % \clarinetOneStaff
+    % \clarinetTwoStaff
+    % \bassoonOneStaff
+    % \bassoonTwoStaff
 >>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -214,20 +214,20 @@ hornFourStaff = \new Staff \with {
 } \hornFour
 
 trumpetOneStaff = \new Staff \with {
-  instrumentName = "Trumpet in C 1"
-  shortInstrumentName = "Tpt. 1"
+  instrumentName = "Trumpet in C"
+  shortInstrumentName = "Tpt."
   midiInstrument = "trumpet"
 } \trumpetOne
 
-trumpetTwoStaff = \new Staff \with {
-  instrumentName = "Trumpet in C 2"
-  shortInstrumentName = "Tpt. 2"
-  midiInstrument = "trumpet"
-} \trumpetTwo
+% trumpetTwoStaff = \new Staff \with {
+%   instrumentName = "Trumpet in C 2"
+%   shortInstrumentName = "Tpt. 2"
+%   midiInstrument = "trumpet"
+% } \trumpetTwo
 
 tromboneOneStaff = \new Staff \with {
-  instrumentName = "Trombone 1"
-  shortInstrumentName = "Tbn. 1"
+  instrumentName = "Trombone"
+  shortInstrumentName = "Tbn."
   midiInstrument = "trombone"
 } \tromboneOne
 
@@ -245,19 +245,19 @@ tubaStaff = \new Staff \with {
 
 brassStaves = \new StaffGroup  
 <<
-    \hornOneStaff
-    \hornTwoStaff
-    \hornThreeStaff
-    \hornFourStaff
+    % \hornOneStaff
+    % \hornTwoStaff
+    % \hornThreeStaff
+    % \hornFourStaff
     \trumpetOneStaff
-    \trumpetTwoStaff
+    % \trumpetTwoStaff
     \tromboneOneStaff
-    \tromboneTwoStaff
-    \tubaStaff
+    % \tromboneTwoStaff
+    % \tubaStaff
 >>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% timpani, percussion, and harp staves:
+%%%% timpani, percussion, and piano staves:
 
 timpaniStaff = \new Staff \with {
   instrumentName = "Timpani"
@@ -302,14 +302,14 @@ percussionStaves = \new StaffGroup
     \percussionTwoStaffGroup
 >>
 
-harpStaff = \new PianoStaff \with {
-  instrumentName = "Harp"
-  shortInstrumentName = "Hp."
-  midiInstrument = "harp"
+pianoStaff = \new PianoStaff \with {
+  instrumentName = "Piano"
+  shortInstrumentName = "Pf."
+  midiInstrument = "piano"
 } 
 << 
-  \new Staff = "harpTop" \harpTop
-  \new Staff = "harpBottom" \harpBottom
+  \new Staff = "pianoTop" \pianoTop
+  \new Staff = "pianoBottom" \pianoBottom
 >>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -362,49 +362,49 @@ violinIStandTwoStaff = \new Staff \with {
   << { \violinIThree } \\ { \violinIFour } >>
 }
 
-violinIThreeStaff = \new Staff \with {
-  instrumentName = "3"
-  shortInstrumentName = "3"
-  midiInstrument = "violin"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  { \violinIThree }
-}
+% violinIThreeStaff = \new Staff \with {
+%   instrumentName = "3"
+%   shortInstrumentName = "3"
+%   midiInstrument = "violin"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   { \violinIThree }
+% }
 
-violinIFourStaff = \new Staff \with {
-  instrumentName = "4"
-  shortInstrumentName = "4"
-  midiInstrument = "violin"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  { \violinIFour }
-}
+% violinIFourStaff = \new Staff \with {
+%   instrumentName = "4"
+%   shortInstrumentName = "4"
+%   midiInstrument = "violin"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   { \violinIFour }
+% }
 
-violinIStandThreeStaff = \new Staff \with {
-  instrumentName = "Violin Stand 3"
-  midiInstrument = "violin"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  << { \violinIFive } \\ { \violinISix } >>
-}
+% violinIStandThreeStaff = \new Staff \with {
+%   instrumentName = "Violin Stand 3"
+%   midiInstrument = "violin"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   << { \violinIFive } \\ { \violinISix } >>
+% }
 
-violinIFiveStaff = \new Staff \with {
-  instrumentName = "5"
-  shortInstrumentName = "5"
-  midiInstrument = "violin"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  { \violinIFive }
-}
+% violinIFiveStaff = \new Staff \with {
+%   instrumentName = "5"
+%   shortInstrumentName = "5"
+%   midiInstrument = "violin"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   { \violinIFive }
+% }
 
-violinISixStaff = \new Staff \with {
-  instrumentName = "6"
-  shortInstrumentName = "6"
-  midiInstrument = "violin"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  { \violinISix }
-}
+% violinISixStaff = \new Staff \with {
+%   instrumentName = "6"
+%   shortInstrumentName = "6"
+%   midiInstrument = "violin"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   { \violinISix }
+% }
 
 violinIStandStaves = \new StaffGroup \with {
   \formatDividedStaff
@@ -417,10 +417,10 @@ violinIStandStaves = \new StaffGroup \with {
 } <<
     \violinIOneStaff
     \violinITwoStaff
-    \violinIThreeStaff
-    \violinIFourStaff
-    \violinIFiveStaff
-    \violinISixStaff
+    % \violinIThreeStaff
+    % \violinIFourStaff
+    % \violinIFiveStaff
+    % \violinISixStaff
 >>
 
 %%%% violin II:
@@ -454,57 +454,57 @@ violinIITwoStaff = \new Staff \with {
   { \violinIITwo }
 }
 
-violinIIStandTwoStaff = \new Staff \with {
-  instrumentName = "Violin II Stand 2"
-  midiInstrument = "violin"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  << { \violinIIThree } \\ { \violinIIFour } >>
-}
+% violinIIStandTwoStaff = \new Staff \with {
+%   instrumentName = "Violin II Stand 2"
+%   midiInstrument = "violin"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   << { \violinIIThree } \\ { \violinIIFour } >>
+% }
 
-violinIIThreeStaff = \new Staff \with {
-  instrumentName = "3"
-  shortInstrumentName = "3"
-  midiInstrument = "violin"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  { \violinIIThree }
-}
+% violinIIThreeStaff = \new Staff \with {
+%   instrumentName = "3"
+%   shortInstrumentName = "3"
+%   midiInstrument = "violin"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   { \violinIIThree }
+% }
 
-violinIIFourStaff = \new Staff \with {
-  instrumentName = "4"
-  shortInstrumentName = "4"
-  midiInstrument = "violin"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  { \violinIIFour }
-}
+% violinIIFourStaff = \new Staff \with {
+%   instrumentName = "4"
+%   shortInstrumentName = "4"
+%   midiInstrument = "violin"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   { \violinIIFour }
+% }
 
-violinIIStandThreeStaff = \new Staff \with {
-  instrumentName = "Violin II Stand 3"
-  midiInstrument = "violin"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  << { \violinIIFive } \\ { \violinIISix } >>
-}
+% violinIIStandThreeStaff = \new Staff \with {
+%   instrumentName = "Violin II Stand 3"
+%   midiInstrument = "violin"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   << { \violinIIFive } \\ { \violinIISix } >>
+% }
 
-violinIIFiveStaff = \new Staff \with {
-  instrumentName = "5"
-  shortInstrumentName = "5"
-  midiInstrument = "violin"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  { \violinIIFive }
-}
+% violinIIFiveStaff = \new Staff \with {
+%   instrumentName = "5"
+%   shortInstrumentName = "5"
+%   midiInstrument = "violin"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   { \violinIIFive }
+% }
 
-violinIISixStaff = \new Staff \with {
-  instrumentName = "6"
-  shortInstrumentName = "6"
-  midiInstrument = "violin"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  { \violinIISix }
-}
+% violinIISixStaff = \new Staff \with {
+%   instrumentName = "6"
+%   shortInstrumentName = "6"
+%   midiInstrument = "violin"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   { \violinIISix }
+% }
 
 violinIIStandStaves = \new StaffGroup \with {
   \formatDividedStaff
@@ -517,10 +517,10 @@ violinIIStandStaves = \new StaffGroup \with {
 } <<
     \violinIIOneStaff
     \violinIITwoStaff
-    \violinIIThreeStaff
-    \violinIIFourStaff
-    \violinIIFiveStaff
-    \violinIISixStaff
+    % \violinIIThreeStaff
+    % \violinIIFourStaff
+    % \violinIIFiveStaff
+    % \violinIISixStaff
 >>
 
 %%%% viola!!!:
@@ -551,31 +551,31 @@ violaTwoStaff = \new Staff \with {
   { \violaTwo }
 }
 
-violaStandTwoStaff = \new Staff \with {
-  instrumentName = "Viola Stand 2"
-  midiInstrument = "viola"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  << { \violaThree } \\ { \violaFour } >>
-}
+% violaStandTwoStaff = \new Staff \with {
+%   instrumentName = "Viola Stand 2"
+%   midiInstrument = "viola"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   << { \violaThree } \\ { \violaFour } >>
+% }
 
-violaThreeStaff = \new Staff \with {
-  instrumentName = "3"
-  shortInstrumentName = "3"
-  midiInstrument = "viola"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
- { \violaThree }
-}
+% violaThreeStaff = \new Staff \with {
+%   instrumentName = "3"
+%   shortInstrumentName = "3"
+%   midiInstrument = "viola"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%  { \violaThree }
+% }
 
-violaFourStaff = \new Staff \with {
-  instrumentName = "4"
-  shortInstrumentName = "4"
-  midiInstrument = "viola"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  { \violaFour }
-}
+% violaFourStaff = \new Staff \with {
+%   instrumentName = "4"
+%   shortInstrumentName = "4"
+%   midiInstrument = "viola"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   { \violaFour }
+% }
 
 
 violaStandStaves = \new StaffGroup \with {
@@ -589,8 +589,8 @@ violaStandStaves = \new StaffGroup \with {
 } <<
     \violaOneStaff
     \violaTwoStaff
-    \violaThreeStaff
-    \violaFourStaff
+    % \violaThreeStaff
+    % \violaFourStaff
 >>
 
 %%%% celli:
@@ -621,31 +621,31 @@ celloTwoStaff = \new Staff \with {
   { \celloTwo }
 }
 
-celloStandTwoStaff = \new Staff \with {
-  instrumentName = "Cello Stand 2"
-  midiInstrument = "cello"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  << { \celloThree } \\ { \celloFour } >>
-}
+% celloStandTwoStaff = \new Staff \with {
+%   instrumentName = "Cello Stand 2"
+%   midiInstrument = "cello"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   << { \celloThree } \\ { \celloFour } >>
+% }
 
-celloThreeStaff = \new Staff \with {
-  instrumentName = "3"
-  shortInstrumentName = "3"
-  midiInstrument = "cello"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  { \celloThree }
-}
+% celloThreeStaff = \new Staff \with {
+%   instrumentName = "3"
+%   shortInstrumentName = "3"
+%   midiInstrument = "cello"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   { \celloThree }
+% }
 
-celloFourStaff = \new Staff \with {
-  instrumentName = "4"
-  shortInstrumentName = "4"
-  midiInstrument = "cello"
-} {
-  \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
-  { \celloFour }
-}
+% celloFourStaff = \new Staff \with {
+%   instrumentName = "4"
+%   shortInstrumentName = "4"
+%   midiInstrument = "cello"
+% } {
+%   \override Staff.InstrumentName #'self-alignment-X = #RIGHT 
+%   { \celloFour }
+% }
 
 celloStandStaves = \new StaffGroup \with {
   \formatDividedStaff
@@ -658,8 +658,8 @@ celloStandStaves = \new StaffGroup \with {
 } <<
     \celloOneStaff
     \celloTwoStaff
-    \celloThreeStaff
-    \celloFourStaff
+    % \celloThreeStaff
+    % \celloFourStaff
 >>
 
 %%%% bass:

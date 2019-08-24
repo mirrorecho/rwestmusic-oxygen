@@ -1,13 +1,13 @@
-\version "2.16.2"
+\version "2.19.80"
 
 \paper {
   #(set-paper-size "tabloid")
   %#(set-paper-size "letter")
-  left-margin = 22\mm
+  left-margin = 28\mm
   system-separator-markup = \slashSeparator
 }
 
-#(set-global-staff-size 12)
+#(set-global-staff-size 20)
 showScoreStuff = 1
 showPartStuff = 0
 
@@ -65,10 +65,10 @@ soloviolins =  \new StaffGroup { <<
 
 \score {
   <<
-    \override Score.BarNumber #'break-visibility = #'#(#f #t #t)
-    \override Score.BarNumber #'font-size = #1.4
-    \override Score.BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
-    \override Score.RehearsalMark #'font-size = #2
+    \override Score.BarNumber.break-visibility = #'#(#f #t #t)
+    \override Score.BarNumber.font-size = #1.4
+    \override Score.BarNumber.stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
+    \override Score.RehearsalMark.font-size = #2
     \set Score.markFormatter = #format-mark-circle-letters
 %{
     \cloudsStaffOne
@@ -81,7 +81,7 @@ soloviolins =  \new StaffGroup { <<
     \brassStaves
     \timpaniStaff
     \percussionStaves
-    \harpStaff
+    \pianoStaff
     %\figureStaffOne
     \stringStaves
   >>
@@ -90,12 +90,12 @@ soloviolins =  \new StaffGroup { <<
     \context {\Staff \remove "Instrument_switch_engraver" }
 %%{
     \context {\RhythmicStaff \RemoveEmptyStaves
-          \override VerticalAxisGroup #'remove-first = ##t
-          \override Hairpin #'minimum-length = #6
+          \override VerticalAxisGroup.remove-first = ##t
+          \override Hairpin.minimum-length = #6
       }
     \context {\Staff \RemoveEmptyStaves
-          \override VerticalAxisGroup #'remove-first = ##t
-          \override Hairpin #'minimum-length = #6
+          \override VerticalAxisGroup.remove-first = ##t
+          \override Hairpin.minimum-length = #6
       } % FRENCH SCORE
       %}
 
@@ -104,7 +104,7 @@ soloviolins =  \new StaffGroup { <<
   \midi {
     \context {
       \Score
-      tempoWholesPerMinute = #(ly:make-moment 102 4)
+      tempoWholesPerMinute = #(ly:make-moment 102/4)
     }
   }
   %}

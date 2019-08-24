@@ -1,14 +1,15 @@
 \version "2.16.2"
 
-  #(set! paper-alist (cons '("10x13" . (cons (* 10 in) (* 13 in))) paper-alist))
+  % #(set! paper-alist (cons '("10x13" . (cons (* 10 in) (* 13 in))) paper-alist))
 
   \paper {
-    #(set-paper-size "10x13")
+    % #(set-paper-size "10x13")
+    #(set-paper-size "letter")
     system-system-spacing #'basic-distance = #12
     system-system-spacing #'padding = #9
   }  
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 19)
 
 showScoreStuff = 0
 showPartStuff = 1
@@ -36,13 +37,10 @@ engraveGlobal = {
 
 %%{---------------------------------------------------------------------------
 \book {
-  \bookOutputName "RandallWest-Oxygen.Flutes"
+  \bookOutputName "RandallWest-Oxygen.Flute"
   \score {
-      \new StaffGroup <<
      \fluteOneStaff
-     \fluteTwoStaff
-     >>
-     \header { piece = "Flute 1, 2" }
+     \header { piece = "Flute" }
       \layout {
         \context {
           \Score
@@ -66,13 +64,10 @@ engraveGlobal = {
 %}
 %%{---------------------------------------------------------------------------
 \book {
-  \bookOutputName "RandallWest-Oxygen.Oboes"
+  \bookOutputName "RandallWest-Oxygen.Oboe"
   \score {
-      \new StaffGroup <<
      \oboeOneStaff
-     \oboeTwoStaff
-     >>
-     \header { piece = "Oboe 1, 2" }
+     \header { piece = "Oboe" }
       \layout {
         \context {
           \Score
@@ -94,67 +89,67 @@ engraveGlobal = {
     }
   }
 %}
-%%{---------------------------------------------------------------------------
-\book {
-  \bookOutputName "RandallWest-Oxygen.Clarinets"
-  \score {
-      \new StaffGroup <<
-     \transpose c d  \clarinetOneStaff
-     \transpose c d  \clarinetTwoStaff
-     >>
-     \header { piece = "Clarinet in Bb 1, 2" }
-      \layout {
-        \context {
-          \Score
-          \override MultiMeasureRest #'expand-limit = #1
-          \override BarNumber #'font-size = #1.4
-          \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
-        }
-        \context {
-          \Staff
-          \remove Instrument_name_engraver
-          \override Hairpin #'minimum-length = #6
-        }
-        \context {
-          \RhythmicStaff
-          \remove Instrument_name_engraver
-          \override Hairpin #'minimum-length = #6
-        }
-      }
-    }
-  }
-%}
-%%{---------------------------------------------------------------------------
-\book {
-  \bookOutputName "RandallWest-Oxygen.Bassoons"
-  \score {
-      \new StaffGroup <<
-     \bassoonOneStaff
-     \bassoonTwoStaff
-     >>
-     \header { piece = "Bassoon 1, 2" }
-      \layout {
-        \context {
-          \Score
-          \override MultiMeasureRest #'expand-limit = #1
-          \override BarNumber #'font-size = #1.4
-          \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
-        }
-        \context {
-          \Staff
-          \remove Instrument_name_engraver
-          \override Hairpin #'minimum-length = #6
-        }
-        \context {
-          \RhythmicStaff
-          \remove Instrument_name_engraver
-          \override Hairpin #'minimum-length = #6
-        }
-      }
-    }
-  }
-%}
-%%{---------------------------------------------------------------------------
+% %%{---------------------------------------------------------------------------
+% \book {
+%   \bookOutputName "RandallWest-Oxygen.Clarinets"
+%   \score {
+%       \new StaffGroup <<
+%      \transpose c d  \clarinetOneStaff
+%      \transpose c d  \clarinetTwoStaff
+%      >>
+%      \header { piece = "Clarinet in Bb 1, 2" }
+%       \layout {
+%         \context {
+%           \Score
+%           \override MultiMeasureRest #'expand-limit = #1
+%           \override BarNumber #'font-size = #1.4
+%           \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
+%         }
+%         \context {
+%           \Staff
+%           \remove Instrument_name_engraver
+%           \override Hairpin #'minimum-length = #6
+%         }
+%         \context {
+%           \RhythmicStaff
+%           \remove Instrument_name_engraver
+%           \override Hairpin #'minimum-length = #6
+%         }
+%       }
+%     }
+%   }
+% %}
+% %%{---------------------------------------------------------------------------
+% \book {
+%   \bookOutputName "RandallWest-Oxygen.Bassoons"
+%   \score {
+%       \new StaffGroup <<
+%      \bassoonOneStaff
+%      \bassoonTwoStaff
+%      >>
+%      \header { piece = "Bassoon 1, 2" }
+%       \layout {
+%         \context {
+%           \Score
+%           \override MultiMeasureRest #'expand-limit = #1
+%           \override BarNumber #'font-size = #1.4
+%           \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
+%         }
+%         \context {
+%           \Staff
+%           \remove Instrument_name_engraver
+%           \override Hairpin #'minimum-length = #6
+%         }
+%         \context {
+%           \RhythmicStaff
+%           \remove Instrument_name_engraver
+%           \override Hairpin #'minimum-length = #6
+%         }
+%       }
+%     }
+%   }
+% %}
+% %%{---------------------------------------------------------------------------
 \book {
   \bookOutputName "RandallWest-Oxygen.Horns-1-2"
   \score {
@@ -214,15 +209,15 @@ engraveGlobal = {
     }
   }
 %}
-%%{---------------------------------------------------------------------------
+% %%{---------------------------------------------------------------------------
 \book {
-  \bookOutputName "RandallWest-Oxygen.Trumpets"
+  \bookOutputName "RandallWest-Oxygen.Trumpet"
   \score {
       \new StaffGroup <<
      \trumpetOneStaff
-     \trumpetTwoStaff
+     % \trumpetTwoStaff
      >>
-     \header { piece = "Trumpet in C 1, 2" }
+     \header { piece = "Trumpet in C" }
       \layout {
         \context {
           \Score
@@ -244,15 +239,15 @@ engraveGlobal = {
     }
   }
 %}
-%%{---------------------------------------------------------------------------
+% %%{---------------------------------------------------------------------------
 \book {
-  \bookOutputName "RandallWest-Oxygen.Trombones"
+  \bookOutputName "RandallWest-Oxygen.Trombone"
   \score {
       \new StaffGroup <<
      \tromboneOneStaff
-     \tromboneTwoStaff
+     % \tromboneTwoStaff
      >>
-     \header { piece = "Trombone 1, 2" }
+     \header { piece = "Trombone" }
       \layout {
         \context {
           \Score
@@ -274,34 +269,34 @@ engraveGlobal = {
     }
   }
 %}
-%%{---------------------------------------------------------------------------
-\book {
-  \bookOutputName "RandallWest-Oxygen.Tuba"
-  \score {
-     \tubaStaff
-     \header { piece = "Tuba" }
-      \layout {
-        \context {
-          \Score
-          \override MultiMeasureRest #'expand-limit = #1
-          \override BarNumber #'font-size = #1.4
-          \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
-        }
-        \context {
-          \Staff
-          \remove Instrument_name_engraver
-          \override Hairpin #'minimum-length = #6
-        }
-        \context {
-          \RhythmicStaff
-          \remove Instrument_name_engraver
-          \override Hairpin #'minimum-length = #6
-        }
-      }
-    }
-  }
-%}
-%%{---------------------------------------------------------------------------
+% %%{---------------------------------------------------------------------------
+% \book {
+%   \bookOutputName "RandallWest-Oxygen.Tuba"
+%   \score {
+%      \tubaStaff
+%      \header { piece = "Tuba" }
+%       \layout {
+%         \context {
+%           \Score
+%           \override MultiMeasureRest #'expand-limit = #1
+%           \override BarNumber #'font-size = #1.4
+%           \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
+%         }
+%         \context {
+%           \Staff
+%           \remove Instrument_name_engraver
+%           \override Hairpin #'minimum-length = #6
+%         }
+%         \context {
+%           \RhythmicStaff
+%           \remove Instrument_name_engraver
+%           \override Hairpin #'minimum-length = #6
+%         }
+%       }
+%     }
+%   }
+% %}
+% %%{---------------------------------------------------------------------------
 \book {
   \bookOutputName "RandallWest-Oxygen.Timpani"
   \score {
@@ -389,10 +384,10 @@ engraveGlobal = {
 %}
 %%{---------------------------------------------------------------------------
 \book {
-  \bookOutputName "RandallWest-Oxygen.Harp"
+  \bookOutputName "RandallWest-Oxygen.Piano"
   \score {
-     \harpStaff
-     \header { piece = "Harp" }
+     \pianoStaff
+     \header { piece = "Piano" }
       \layout {
         \context {
           \Score
@@ -416,13 +411,13 @@ engraveGlobal = {
 %}
 %%{---------------------------------------------------------------------------
 \book {
-  \bookOutputName "RandallWest-Oxygen.ViolinI-Stand.1"
+  \bookOutputName "RandallWest-Oxygen.ViolinI"
   \score {
       \new StaffGroup <<
      \violinIOneStaff
      \violinITwoStaff
      >>
-     \header { piece = "Violin I, 1st stand" }
+     \header { piece = "Violin I" }
       \layout {
         \context {
           \Score
@@ -443,73 +438,73 @@ engraveGlobal = {
     }
   }
 %}
-%%{---------------------------------------------------------------------------
+% %%{---------------------------------------------------------------------------
+% \book {
+%   \bookOutputName "RandallWest-Oxygen.ViolinI-Stand.2"
+%   \score {
+%       \new StaffGroup <<
+%      \violinIThreeStaff
+%      \violinIFourStaff
+%      >>
+%      \header { piece = "Violin I, 2nd stand" }
+%       \layout {
+%         \context {
+%           \Score
+%           \override MultiMeasureRest #'expand-limit = #1
+%           \override BarNumber #'font-size = #1.4
+%           \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
+%         }
+%         \context {
+%           \Staff
+%           \remove Instrument_name_engraver
+%           \override Hairpin #'minimum-length = #6
+%         }
+%         \context {\Staff \RemoveEmptyStaves
+%               \override VerticalAxisGroup #'remove-first = ##t
+%               \override Hairpin #'minimum-length = #6
+%           }
+%       }
+%     }
+%   }
+% %}
+% %%{---------------------------------------------------------------------------
+% \book {
+%   \bookOutputName "RandallWest-Oxygen.ViolinI-Stand.3"
+%   \score {
+%       \new StaffGroup <<
+%      \violinIFiveStaff
+%      \violinISixStaff
+%      >>
+%      \header { piece = "Violin I, 3rd stand" }
+%       \layout {
+%         \context {
+%           \Score
+%           \override MultiMeasureRest #'expand-limit = #1
+%           \override BarNumber #'font-size = #1.4
+%           \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
+%         }
+%         \context {
+%           \Staff
+%           \remove Instrument_name_engraver
+%           \override Hairpin #'minimum-length = #6
+%         }
+%         \context {\Staff \RemoveEmptyStaves
+%               \override VerticalAxisGroup #'remove-first = ##t
+%               \override Hairpin #'minimum-length = #6
+%           }
+%       }
+%     }
+%   }
+% %}
+% %%{---------------------------------------------------------------------------
 \book {
-  \bookOutputName "RandallWest-Oxygen.ViolinI-Stand.2"
-  \score {
-      \new StaffGroup <<
-     \violinIThreeStaff
-     \violinIFourStaff
-     >>
-     \header { piece = "Violin I, 2nd stand" }
-      \layout {
-        \context {
-          \Score
-          \override MultiMeasureRest #'expand-limit = #1
-          \override BarNumber #'font-size = #1.4
-          \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
-        }
-        \context {
-          \Staff
-          \remove Instrument_name_engraver
-          \override Hairpin #'minimum-length = #6
-        }
-        \context {\Staff \RemoveEmptyStaves
-              \override VerticalAxisGroup #'remove-first = ##t
-              \override Hairpin #'minimum-length = #6
-          }
-      }
-    }
-  }
-%}
-%%{---------------------------------------------------------------------------
-\book {
-  \bookOutputName "RandallWest-Oxygen.ViolinI-Stand.3"
-  \score {
-      \new StaffGroup <<
-     \violinIFiveStaff
-     \violinISixStaff
-     >>
-     \header { piece = "Violin I, 3rd stand" }
-      \layout {
-        \context {
-          \Score
-          \override MultiMeasureRest #'expand-limit = #1
-          \override BarNumber #'font-size = #1.4
-          \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
-        }
-        \context {
-          \Staff
-          \remove Instrument_name_engraver
-          \override Hairpin #'minimum-length = #6
-        }
-        \context {\Staff \RemoveEmptyStaves
-              \override VerticalAxisGroup #'remove-first = ##t
-              \override Hairpin #'minimum-length = #6
-          }
-      }
-    }
-  }
-%}
-%%{---------------------------------------------------------------------------
-\book {
-  \bookOutputName "RandallWest-Oxygen.ViolinII-Stand.1"
+  \bookOutputName "RandallWest-Oxygen.ViolinII"
   \score {
       \new StaffGroup <<
      \violinIIOneStaff
      \violinIITwoStaff
      >>
-     \header { piece = "Violin II, 1st stand" }
+     \header { piece = "Violin II" }
       \layout {
         \context {
           \Score
@@ -531,72 +526,72 @@ engraveGlobal = {
   }
 %}
 %%{---------------------------------------------------------------------------
-\book {
-  \bookOutputName "RandallWest-Oxygen.ViolinII-Stand.2"
-  \score {
-      \new StaffGroup <<
-     \violinIIThreeStaff
-     \violinIIFourStaff
-     >>
-     \header { piece = "Violin II, 2nd stand" }
-      \layout {
-        \context {
-          \Score
-          \override MultiMeasureRest #'expand-limit = #1
-          \override BarNumber #'font-size = #1.4
-          \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
-        }
-        \context {
-          \Staff
-          \remove Instrument_name_engraver
-          \override Hairpin #'minimum-length = #6
-        }
-        \context {\Staff \RemoveEmptyStaves
-              \override VerticalAxisGroup #'remove-first = ##t
-              \override Hairpin #'minimum-length = #6
-          }
-      }
-    }
-  }
-%}
+% \book {
+%   \bookOutputName "RandallWest-Oxygen.ViolinII-Stand.2"
+%   \score {
+%       \new StaffGroup <<
+%      \violinIIThreeStaff
+%      \violinIIFourStaff
+%      >>
+%      \header { piece = "Violin II" }
+%       \layout {
+%         \context {
+%           \Score
+%           \override MultiMeasureRest #'expand-limit = #1
+%           \override BarNumber #'font-size = #1.4
+%           \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
+%         }
+%         \context {
+%           \Staff
+%           \remove Instrument_name_engraver
+%           \override Hairpin #'minimum-length = #6
+%         }
+%         \context {\Staff \RemoveEmptyStaves
+%               \override VerticalAxisGroup #'remove-first = ##t
+%               \override Hairpin #'minimum-length = #6
+%           }
+%       }
+%     }
+%   }
+% %}
+% %%{---------------------------------------------------------------------------
+% \book {
+%   \bookOutputName "RandallWest-Oxygen.ViolinII-Stand.3"
+%   \score {
+%       \new StaffGroup <<
+%      \violinIIFiveStaff
+%      \violinIISixStaff
+%      >>
+%      \header { piece = "Violin II, 3rd stand" }
+%       \layout {
+%         \context {
+%           \Score
+%           \override MultiMeasureRest #'expand-limit = #1
+%           \override BarNumber #'font-size = #1.4
+%           \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
+%         }
+%         \context {
+%           \Staff
+%           \remove Instrument_name_engraver
+%           \override Hairpin #'minimum-length = #6
+%         }
+%         \context {\Staff \RemoveEmptyStaves
+%               \override VerticalAxisGroup #'remove-first = ##t
+%               \override Hairpin #'minimum-length = #6
+%           }
+%       }
+%     }
+%   }
+% %}
 %%{---------------------------------------------------------------------------
 \book {
-  \bookOutputName "RandallWest-Oxygen.ViolinII-Stand.3"
-  \score {
-      \new StaffGroup <<
-     \violinIIFiveStaff
-     \violinIISixStaff
-     >>
-     \header { piece = "Violin II, 3rd stand" }
-      \layout {
-        \context {
-          \Score
-          \override MultiMeasureRest #'expand-limit = #1
-          \override BarNumber #'font-size = #1.4
-          \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
-        }
-        \context {
-          \Staff
-          \remove Instrument_name_engraver
-          \override Hairpin #'minimum-length = #6
-        }
-        \context {\Staff \RemoveEmptyStaves
-              \override VerticalAxisGroup #'remove-first = ##t
-              \override Hairpin #'minimum-length = #6
-          }
-      }
-    }
-  }
-%}
-%%{---------------------------------------------------------------------------
-\book {
-  \bookOutputName "RandallWest-Oxygen.Viola-Stand.1"
+  \bookOutputName "RandallWest-Oxygen.Viola"
   \score {
       \new StaffGroup <<
      \violaOneStaff
      \violaTwoStaff
      >>
-     \header { piece = "Viola, 1st stand" }
+     \header { piece = "Viola" }
       \layout {
         \context {
           \Score
@@ -618,43 +613,43 @@ engraveGlobal = {
   }
 %}
 %%{---------------------------------------------------------------------------
-\book {
-  \bookOutputName "RandallWest-Oxygen.Viola-Stand.2"
-  \score {
-      \new StaffGroup <<
-     \violaThreeStaff
-     \violaFourStaff
-     >>
-     \header { piece = "Viola, 2nd stand" }
-      \layout {
-        \context {
-          \Score
-          \override MultiMeasureRest #'expand-limit = #1
-          \override BarNumber #'font-size = #1.4
-          \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
-        }
-        \context {
-          \Staff
-          \remove Instrument_name_engraver
-          \override Hairpin #'minimum-length = #6
-        }
-        \context {\Staff \RemoveEmptyStaves
-              \override VerticalAxisGroup #'remove-first = ##t
-              \override Hairpin #'minimum-length = #6
-          }
-      }
-    }
-  }
-%}
+% \book {
+%   \bookOutputName "RandallWest-Oxygen.Viola-Stand.2"
+%   \score {
+%       \new StaffGroup <<
+%      \violaThreeStaff
+%      \violaFourStaff
+%      >>
+%      \header { piece = "Viola, 2nd stand" }
+%       \layout {
+%         \context {
+%           \Score
+%           \override MultiMeasureRest #'expand-limit = #1
+%           \override BarNumber #'font-size = #1.4
+%           \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
+%         }
+%         \context {
+%           \Staff
+%           \remove Instrument_name_engraver
+%           \override Hairpin #'minimum-length = #6
+%         }
+%         \context {\Staff \RemoveEmptyStaves
+%               \override VerticalAxisGroup #'remove-first = ##t
+%               \override Hairpin #'minimum-length = #6
+%           }
+%       }
+%     }
+%   }
+% %}
 %%{---------------------------------------------------------------------------
 \book {
-  \bookOutputName "RandallWest-Oxygen.Cello-Stand.1"
+  \bookOutputName "RandallWest-Oxygen.Cello"
   \score {
       \new StaffGroup <<
      \celloOneStaff
      \celloTwoStaff
      >>
-     \header { piece = "Cello, 1st stand" }
+     \header { piece = "Cello" }
       \layout {
         \context {
           \Score
@@ -676,34 +671,34 @@ engraveGlobal = {
   }
 %}
 %%{---------------------------------------------------------------------------
-\book {
-  \bookOutputName "RandallWest-Oxygen.Cello-Stand.2"
-  \score {
-      \new StaffGroup <<
-     \celloThreeStaff
-     \celloFourStaff
-     >>
-     \header { piece = "Cello, 2nd stand" }
-      \layout {
-        \context {
-          \Score
-          \override MultiMeasureRest #'expand-limit = #1
-          \override BarNumber #'font-size = #1.4
-          \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
-        }
-        \context {
-          \Staff
-          \remove Instrument_name_engraver
-          \override Hairpin #'minimum-length = #6
-        }
-        \context {\Staff \RemoveEmptyStaves
-              \override VerticalAxisGroup #'remove-first = ##t
-              \override Hairpin #'minimum-length = #6
-          }
-      }
-    }
-  }
-%}
+% \book {
+%   \bookOutputName "RandallWest-Oxygen.Cello-Stand.2"
+%   \score {
+%       \new StaffGroup <<
+%      \celloThreeStaff
+%      \celloFourStaff
+%      >>
+%      \header { piece = "Cello, 2nd stand" }
+%       \layout {
+%         \context {
+%           \Score
+%           \override MultiMeasureRest #'expand-limit = #1
+%           \override BarNumber #'font-size = #1.4
+%           \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
+%         }
+%         \context {
+%           \Staff
+%           \remove Instrument_name_engraver
+%           \override Hairpin #'minimum-length = #6
+%         }
+%         \context {\Staff \RemoveEmptyStaves
+%               \override VerticalAxisGroup #'remove-first = ##t
+%               \override Hairpin #'minimum-length = #6
+%           }
+%       }
+%     }
+%   }
+% %}
 %%{---------------------------------------------------------------------------
 \book {
   \bookOutputName "RandallWest-Oxygen.Bass"

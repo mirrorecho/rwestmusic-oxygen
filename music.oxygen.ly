@@ -461,7 +461,7 @@ hornTwo = \relative c' {
   }
   % AF ---------------------------------------------
   \bubbleLine \segAFShow \segAFUniversal \relative c' {
-    R1 g1\p\<( | c8\mp g'4) r8 r2 | g,4.\p\<( f8 ~ f2 ~  | f4. f'8\mp e) r8 r4 | f,1\p\<( ~ | f2 f'4.\mf e8 ~ | e4) r4 r4 g,4\p\<( ~ |
+    R1 | g1\p\<( | c8\mp g'4) r8 r2 | g,4.\p\<( f8 ~ f2 ~  | f4. f'8\mp e) r8 r4 | f,1\p\<( ~ | f2 f'4.\mf e8 ~ | e4) r4 r4 g,4\p\<( ~ |
         g1 ~ | g8 c4.->\f g'4.->) r8 | r2 c,2\p\<( ~ | c1 | f4.\mf e8 ~ e4) r4 | c1\p\< ~ | c1\mp\> <>\! |
   }
   \bubbleLine \segAHShow \segAHUniversal \relative c' {
@@ -573,15 +573,18 @@ trumpetOne = \relative c' {
     \segRestF
   }
   \bubbleLine \segOShow \segOUniversal {
-    \segRestO
+    r4^"cup mute" b2.\pp ~ | b1 ~ | b2.  r4 | 
+    r2 b2\ppp\<( ~ | b8 a4.\p ~ a2 ~ | a1) | R1 | R1 |
+    r2 a2\ppp\<( ~ | a1 ~ | e'1\mp ~ | e4) r4 r2 |
+    r2 e2\pp\< ~ | e4 e2.\mp\!\> ~ | e2 r2\! | R1 | d1\pp\< ~ | d4\mp d2. |
   }
   \bubbleLine \segVShow \segVUniversal {
     \segRestV
   }
   % ---------------------------------------------
-  \bubbleLine \segAFShow \segAFUniversal \relative c'' {
-    R1*8 |
-    << c1 {s2.\p\< s4 \mf } >> | r2 g4.\p\< | f'8->\f ~ | f4\> r4\! r2 | R1*4
+  \bubbleLine \segAFShow \segAFUniversal \relative c {
+    R1  | d'2\p\<( f4.\mp e8) | r4 d2.\p\<( ~ | d2. c4\mp | g'4.) r8 r8 d4.\p\<( | c2 ~ c4.  f8\mf ~ | f4 e4) r2^"mute out" | r2 c2 \p\<( | 
+    << c'1) {s2. s4 \mf } >> | r2 g4.\p\< | f'8->\f ~ | f4\> r4\! r2 | R1*4
   }
   \bubbleLine \segAHShow \segAHUniversal \relative c'{
     r2 c'4.(\p\< g8\mf ~ | g4 f4 ~ f8  c'4. ~ | c2.)  r4  | r2 e,4( f4 ~ | f8 c'4.) c,4.( c'8 ~ | c1) | 
@@ -590,8 +593,8 @@ trumpetOne = \relative c' {
     d2\mp\< ~ d4. e8\mf\! ~ | e2.\> r4\! | R1 | R1 |
   }
   % ---------------------------------------------
-  \bubbleLine \segASShow \segASUniversal {
-    \segRestAS
+  \bubbleLine \segASShow \segASUniversal \relative c' {
+    r4 a'2.\p\< ~ | a1\mp\> | R1\! | R1*10 |
   }
   \bubbleLine \segANShow \segANUniversal {
     \segRestAN
@@ -646,15 +649,19 @@ tromboneOne = \relative c {
     \segRestF
   }
   \bubbleLine \segOShow \segOUniversal {
-    \segRestO
+    R1*2 | r4^"cup mute" e4\ppp\<( ~ e d\p ~ | d1 ~ | d8) r8 r4 r2 | 
+    r2 d2\ppp\<( ~ | d2.\p e4 ~ | e1) | r2 e2\ppp\<( ~ | 
+    %M (B)
+    e1 ~ | a1\mp ~ | a4) r4 r2 |
+    r2 a2\pp\<( ~ | a4 g2.\mp\!\> ~ | g2) r2\! | R1 | g1\pp\<( ~ | g4\mp a2.) |
   }
   \bubbleLine \segVShow \segVUniversal {
     \segRestV
   }
   % ---------------------------------------------
   \bubbleLine \segAFShow \segAFUniversal \relative c {
-    r2 r8 b'4\p\<( c8) | c4--\mf c( b8)  r8 r4 | a8-- a4-- a8-- ~ a8 a4( g8) | R1*6 |
-    r8 c,4.->\f( g'4. f'8 ~ | f4) r4 r2
+    R1 | g'1\p\<( | c8\mp g'4) r8 r2 | g,4.\p\<( f8 ~ f2 ~  | f4. f'8\mp e) r8 r4 | f,1\p\<( ~ | f2 f'4.\mf e8 ~ | e4) r4^"mute out" r2 |
+    R1 | r8 c,4.->\f( g'4. f'8 ~ | f4) c,2.->
     R1*4
   }
   \bubbleLine \segAHShow \segAHUniversal \relative c' {
@@ -665,9 +672,8 @@ tromboneOne = \relative c {
     r8 c,4. ~ c4 r4 | c1->\> ~ | c1\mf | r4 r8 c8 ~ c2 ~ | c1 ~ | c2 r2 | c1 ~ | c1
   }
   % ---------------------------------------------
-  \bubbleLine \segASShow \segASUniversal {
-    \segRestAR
-    \segRestAQ
+  \bubbleLine \segASShow \segASUniversal \relative c' {
+    r2 r4 f4\p ~ | <<{f1 ~ | f2 r2} {s2\< s2\mp\> | s2 s2\!} >> | R1*10 |
   }
   \bubbleLine \segANShow \segANUniversal {
     \segRestAN
@@ -692,8 +698,9 @@ tromboneTwo = \relative c, {
   }
   % ---------------------------------------------
   \bubbleLine \segAFShow \segAFUniversal \relative c' {
-    R1 | r2 b8\mf  b4-- b8( | a8) r8 r4 r2 | R1*6 |
-    r8 g,4.->\f ~ g2 | r4 g2.-> | R1*4 |
+    % TO DO: THIS LINE BELOW IS A MISTAKE! (replace with what it was before)
+    R1 | g1\p\<( | c8\mp g'4) r8 r2 | g,4.\p\<( f8 ~ f2 ~  | f4. f'8\mp e) r8 r4 | f,1\p\<( ~ | f2 f'4.\mf e8 ~ | e4) r4^"mute out" r2 |
+    R1 | r8 g,4.->\f ~ g2 | r4 g2.-> | R1*4 |
   }
   \bubbleLine \segAHShow \segAHUniversal \relative c' {
     R1 | r2 \clef tenor c2(\p\< ~ | c2. g'4\mf\! ~ | g8 f4.)  r2 | c1( ~ | c2  ~ c8 e4. | f4. e8) r2 |
@@ -905,25 +912,25 @@ percussionTwo = \relative c' {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% HARP
+%%%% PIANO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-harpTop = \relative c' { 
+pianoTop = \relative c' { 
   \global
   \bubbleLine \segFShow \segFUniversal {
     % SEG A
     \slurDashed
-    \repeat tremolo 16 {b'32(\p ces} |
-    \repeat tremolo 16 {b32 ces} |
-    \repeat tremolo 16 {b32 ces} |
-    \repeat tremolo 16 {b32 ces} |
+    \repeat tremolo 16 {b'32(\p b'} |
+    \repeat tremolo 16 {b,32 b'} |
+    \repeat tremolo 16 {b,32 b'} |
+    \repeat tremolo 16 {b,32 b'} |
     % SEG C
-    \repeat tremolo 4 {b32 ces)} g4\mp r8[ f8] r4|
+    \repeat tremolo 4 {b,32 b')} g,4\mp r8[ f8] r4|
     r4 r8[ f8] r2 |
     r4 r8[ g8] r4 f4
 
     % SEG D
-    \repeat tremolo 16 {b'32(\p ces} |
-    \repeat tremolo 16 {b32 ces)} |
+    \repeat tremolo 16 {b32(\p b'} |
+    \repeat tremolo 16 {b,32 b')} |
     R1*3 
     \slurSolid
   }
@@ -941,30 +948,21 @@ harpTop = \relative c' {
   }
   \bubbleLine \segAHShow \segAHUniversal \relative c'' {
     R1*3 | r8 f8 f f r4 f8 f | f4 r4 r2 | r4 f8 f f r8 r4 | f8 f f r8 r2 | r4 f8 f f r8 r4 | f8 f f r8 r2 |
-    <g g'>8\f \change Staff = "harpBottom" <g,, g'> \change Staff = "harpTop" <g'' g'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop"
-    <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" |
-    <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop"
-    <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" |
-    <g'' g'>8 \change Staff = "harpBottom" <g,, g'> \change Staff = "harpTop" <g'' g'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop"
-    <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" |
-    <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop"
-    <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" |
-    <g'' g'>8 \change Staff = "harpBottom" <g,, g'> \change Staff = "harpTop" <g'' g'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop"
-    <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" |
-    <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop"
-    <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" |
-    <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <g'' g'> \change Staff = "harpBottom" <g,, g'> \change Staff = "harpTop"
-    <g'' g'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" |
-    <f'' f'>\> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop"
-    <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" |
-    <f'' f'> \change Staff = "harpBottom" <f,, f'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <g,, g'> \change Staff = "harpTop"
-    <g'' g'> \change Staff = "harpBottom" <g,, g'> \change Staff = "harpTop" <f'' f'> \change Staff = "harpBottom" <f,, f'>\mp \change Staff = "harpTop" |
+    g'8\f  g, g' f, f' f, f' f,  |
+    f' f, f' f, f' f, f' f, |
+    g' g, g' f, f' f, f' f, |
+    f' f, f' f, f' f, f' f, |
+    g' g, g' f, f' f, f' f, |
+    f' f, f' f, f' f, f' f, |
+    f' f, g' g, g' f, f' f, |
+    f'\> f, f' f, f' f, f' f, |
+    f' f, f' g, g' g, f' f,\mp  |
   }
   % ---------------------------------------------
   \bubbleLine \segASShow \segASUniversal \relative c' {
     \boxArrow { s16 \times 4/5 {
       \stemUp
-        \change Staff = "harpBottom" f,,8[\mf f'8 \change Staff = "harpTop" \stemDown f' f' g]->} r8
+        \change Staff = "pianoBottom" f,,8[\mf f'8 \change Staff = "pianoTop" \stemDown f' f' g]->} r8
         \stemNeutral
         \arpeggioArrowDown <a c e f>8\arpeggio  s16
         } #4 #4 "freely, repeat" s8
@@ -974,7 +972,7 @@ harpTop = \relative c' {
     \boxArrow \relative c' { 
         \stemDown
         \override TupletBracket #'bracket-visibility = ##t 
-        \times 2/3 { <d d'>8\mf \change Staff = "harpBottom" \stemUp g,, g' \change Staff = "harpTop"} 
+        \times 2/3 { <d d'>8\mf \change Staff = "pianoBottom" \stemUp g,, g' \change Staff = "pianoTop"} 
         \stemNeutral
         g'8 c, <g' g'>4->
         \arpeggioArrowDown <e f g a c>8\arpeggio
@@ -989,7 +987,7 @@ harpTop = \relative c' {
     R1 | r2 f4\pp r4 | e r f r | e r r2 | r2 f4 r | e r f r | e r r2 | }
 }
 
-harpBottom = \relative c { 
+pianoBottom = \relative c { 
   \global
   \clef bass
   \bubbleLine \segFShow \segFUniversal { \segRestF }
@@ -1002,13 +1000,21 @@ harpBottom = \relative c {
     \segRestV
   }
   % ---------------------------------------------
-  \bubbleLine \segAFShow \segAFUniversal {
-    R1*15
+  % AF ---------------------------------------------
+  \bubbleLine \segAFShow \segAFUniversal \relative c {
+    R1 | g2\mp( d'2 ~ | d2) r2 | g,1( | d'1) | r2 g,2 ~ | g1 | r2 g2 ~ | g2. r4 |
+    r8 c,4.->\f( g'4.-> f'8-> ~ | f4) c,2.->
+    R1*4
   }
-  \bubbleLine \segAHShow \segAHUniversal \relative c' {
-    R1*2  R1 | r8 \clef treble f8 f f r4 f8 f | f4 r4 r2 |r4 f8 f f r8 r4 | f8 f f r8 r2 | r4 f8 f f r8 r4 | f8 f f r8 r2 |
-    s1*9
+  % AH ---------------------------------------------
+  \bubbleLine \segAHShow \segAHUniversal \relative c, {
+    % \dynamicUp
+    R1 | R1 | r2 f2->\f ~ | f1  | r2 f2-> ~ | f1 |
+    r4 c'8(\mp\< e f g c) d->\f ~ | d4. d8-> ~ d d4-> d8-> ~ | d d4.-> r4 <bes,,, bes'>4->\ff ~ |
+    <bes bes'>2 r4 <bes bes'>4 ~ | <bes bes'>2 r4 <bes bes'>4-> ~ | <bes bes'>1 ~ | <bes bes'>2. r4 | 
+    <bes bes'>1 ~ | <bes bes'>1 | r4 <bes bes'>2. ~ | <bes bes'>2. r4 | <bes bes'>1 | 
   }
+
   % ---------------------------------------------
   \bubbleLine \segASShow \segASUniversal {
     \clef bass
